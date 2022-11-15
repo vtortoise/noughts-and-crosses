@@ -1,0 +1,51 @@
+<html>
+
+
+<head>
+    <link rel="stylesheet" href="src/style.css">
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+</head>
+
+
+<body onload="start()">
+    <button class="options-exit" onclick=showOptions() id="optionsExit"></button>
+    <div class="options fade-in" id="options">
+        <div class="row">
+            <div class="column" style="flex: 15%">
+                <div id="p1ColorPicker">
+                    <p>Player 1 color</p>
+                </div>
+            </div>
+            <div class="column" style="flex: 70%">
+                <p>VICTORY ROW LENGTH</p>
+                <div>
+                    <ul>
+                        <li><button><img src="src/images/plus.png" id="+1" onclick="changeRowLength(this)"></button></li>
+                        <li><div class="counter centered" id="lengthCounter">0</div></li>
+                        <li><button><img src="src/images/minus.png" id="-1" onclick="changeRowLength(this)"></button></li>
+                    </ul>
+                </div>
+                <br>
+                <br>
+                <br>
+                <button onclick=resetGrid() style="padding: 2px;">RESET GRID</button>
+                <br>
+                <br>
+                <button onclick=resetScore() style="padding: 2px;">RESET SCORE</button>
+            </div>
+            <div class="column" style="flex: 15%">
+                <div id="p2ColorPicker">
+                    <p>Player 2 color</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="banner" id="turn-banner">
+        <button class="counter player1" onclick=showOptions() style="float:left" id="c1">0</button>
+        <button class="counter player2" onclick=showOptions() style="float:right" id="c2">0</button>
+    </header>
+    <div class="grid-container" id="grid-container"></div>
+</body>
+
+
+</html>
